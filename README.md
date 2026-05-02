@@ -12,7 +12,7 @@
 | 内建显示器 | LQ156T1JW05 | 2560x1440 / 165Hz，连接至核显，使用 SwitchResX 修改刷新率、BetterDisplay 开启 HiDPI |
 | 有线网卡 | Realtek PCIe GbE Family Controller | 设备 ID: 10EC-8168 |
 | 无线网卡 | Intel(R) Wi-Fi 6 AX200 160MHz | 设备 ID: 8086-2723 |
-| 蓝牙 | Intel(R) Wireless Bluetooth(R) | USB 接口，设备 ID: 8087-0029 |
+| 蓝牙 | Intel(R) Wireless Bluetooth(R) | USB 接口，设备 ID: 8087-0029，使用修复版 BlueToolFixup.kext 解决 AirPods 无声问题 |
 | 声卡 | Realtek(R) Audio | 设备 ID: 10EC-0257，layout-id 需设为 101 |
 | NVMe SSD 1 | SKHynix_HFS512GD9TNI-L2A0B | PC611 NVMe 控制器，512GB，不兼容 macOS，屏蔽处理 |
 | NVMe SSD 2 | WD Blue SN570 500GB SSD (DRAM-less) | SanDisk Ultra 3D / WD Blue SN570 控制器 |
