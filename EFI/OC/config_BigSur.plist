@@ -24,7 +24,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>Only for Catalina</string>
+                    <string>Only for Catalina &amp; Mojave</string>
                     <key>Enabled</key>
                     <false/>
                     <key>Path</key>
@@ -34,7 +34,7 @@
                     <key>Comment</key>
                     <string>SSDT-Disable_NVMe_GPP1.aml | SimpleKaruzi</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-Disable_NVMe_GPP1.aml</string>
                 </dict>
@@ -238,7 +238,7 @@
                     <key>built-in</key>
                     <data>AQ==</data>
                 </dict>
-				<key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x0)</key>
+                <key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x0)</key>
                 <dict>
                     <key>AAPL00,override-no-connect</key>
                     <data>AP///////wBNEHQVAAAAAAogAQSlIhN4Aw+VrlJDsCYPUFQAAAABAQEBAQEBAQEBAQEBAQEBY2MAoKCgd1AwIDUAWMIQAAAYAAAA/QwwpQMDRgEKICAgICAgAAAAEAAAAAAAAAAAAAAAAAAAAAAA/ABMUTE1NlQxSlcwNQogAfhwIHkCACIAKCmtCoT/CZ8ALwAfAJ8FdgACAAQA3OEDBP8JnwAvAB8AnwV2AAIABAArAAwnADykAAAnADA7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+ZA=</data>
@@ -381,6 +381,24 @@
                     <key>Arch</key>
                     <string>x86_64</string>
                     <key>BundlePath</key>
+                    <string>AirportItlwmMojave.kext</string>
+                    <key>Comment</key>
+                    <string>V2.3.0</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AirportItlwm</string>
+                    <key>MaxKernel</key>
+                    <string>18.99.99</string>
+                    <key>MinKernel</key>
+                    <string>18.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
                     <string>AirportItlwmCatalina.kext</string>
                     <key>Comment</key>
                     <string>V2.3.0</string>
@@ -507,6 +525,24 @@
                     <key>Arch</key>
                     <string>x86_64</string>
                     <key>BundlePath</key>
+                    <string>NootedRed.kext</string>
+                    <key>Comment</key>
+                    <string>V0.8.10 |  | SimpleKaruzi</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/NootedRed</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>18.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
                     <string>V1.9.8 |  | SimpleKaruzi</string>
@@ -597,6 +633,24 @@
                     <key>Arch</key>
                     <string>x86_64</string>
                     <key>BundlePath</key>
+                    <string>GenericUSBXHCI.kext</string>
+                    <key>Comment</key>
+                    <string>V1.3.0b2 |  | SimpleKaruzi</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/GenericUSBXHCI</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>20.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
                     <string>BrightnessKeys.kext</string>
                     <key>Comment</key>
                     <string>V1.0.4 |  | SimpleKaruzi</string>
@@ -626,24 +680,6 @@
                     <string></string>
                     <key>MinKernel</key>
                     <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>BundlePath</key>
-                    <string>GenericUSBXHCI.kext</string>
-                    <key>Comment</key>
-                    <string>V1.3.0b2 |  | SimpleKaruzi</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/GenericUSBXHCI</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string>20.0.0</string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
@@ -759,27 +795,9 @@
                     <key>Arch</key>
                     <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>NootedRed.kext</string>
-                    <key>Comment</key>
-                    <string>V0.8.3 |  | SimpleKaruzi</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/NootedRed</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string>19.0.0</string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>BundlePath</key>
                     <string>RealtekRTL8111.kext</string>
                     <key>Comment</key>
-                    <string>V2.4.2 |  | SimpleKaruzi</string>
+                    <string>V3.0.4 |  | SimpleKaruzi</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -881,7 +899,7 @@
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
-				<dict>
+                <dict>
                     <key>Arch</key>
                     <string>x86_64</string>
                     <key>BundlePath</key>
@@ -2331,6 +2349,8 @@
                     <string></string>
                     <key>Enabled</key>
                     <true/>
+                    <key>HideVerbose</key>
+                    <false/>
                     <key>LoadEarly</key>
                     <false/>
                     <key>Path</key>
@@ -2343,6 +2363,8 @@
                     <string></string>
                     <key>Enabled</key>
                     <true/>
+                    <key>HideVerbose</key>
+                    <false/>
                     <key>LoadEarly</key>
                     <false/>
                     <key>Path</key>
@@ -2355,6 +2377,8 @@
                     <string></string>
                     <key>Enabled</key>
                     <true/>
+                    <key>HideVerbose</key>
+                    <false/>
                     <key>LoadEarly</key>
                     <false/>
                     <key>Path</key>
@@ -2367,6 +2391,8 @@
                     <string></string>
                     <key>Enabled</key>
                     <true/>
+                    <key>HideVerbose</key>
+                    <false/>
                     <key>LoadEarly</key>
                     <false/>
                     <key>Path</key>
