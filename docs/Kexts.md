@@ -59,7 +59,7 @@
 
 ## PC711Probe / PC711ProbeForce（备用，默认禁用）
 
-[PC711Probe](https://github.com/hrx114514x/PC711Probe)（v1.8.1）为 Lilu 插件，修复旧版 macOS（11–15）上部分 NVMe 的 Identify 超时 panic（macOS 26 已原生支持 PC711）。官方实机验证过 SK hynix PC711 / BC711 / BC511 与三星 PM991；**据网友反馈，其他型号的 NVMe 也能正常工作**——标准版可匹配的型号直接用 `PC711Probe.kext`，未在验证列表的型号改用 `PC711ProbeForce.kext` 即可。已在 AMD 平台 + macOS 15.6.1 完成全新安装与 96 GiB 读写压测。
+[PC711Probe](https://github.com/hrx114514x/PC711Probe)（v1.8.1）为 Lilu 插件，修复旧版 macOS（11–15）上部分 NVMe 的 Identify 超时 panic（macOS 26 已原生支持 PC711）。官方实机验证过 SK hynix PC711 / BC711 / BC511 与三星 PM991；**据网友反馈，其他型号的 NVMe 也能正常工作**——标准版可匹配的型号直接用 `PC711Probe.kext`，未在验证列表的型号改用 `PC711ProbeForce.kext` 即可。上游 README 自述的验证范围：一块 PC711（单一 AMD 平台）通过 macOS 15.6.1 完整安装，并在 macOS 15.7.9 完成 96 GiB 顺序读写 / 双轮 SHA-256 校验、睡眠唤醒、重启与 APFS 校验等压力测试，全程无 panic、无 NVMe 超时；Recovery 引导仅在 macOS 11–14 验证。
 
 - 本机系统盘 SN570 工作正常、无此问题，两者均默认 `Enabled=False`。
 - 若需要用（如出厂盘位为 PC711/BC711，或想免屏蔽尝试其他不兼容硬盘）：在 config 的 Kernel → Add 中启用二者之一（**标准版与 Force 版绝不可同时启用**），并按需处理 `SSDT-Disable_NVMe_GPP1.aml`（见主 README）。是否兼容请自行测试，做好备份。
