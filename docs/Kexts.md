@@ -42,7 +42,7 @@
 | `BlueToolFixup.kext` 2.7.3 | 来自 [BlueToolFixup-FixA2DP](https://github.com/hexxyan/BlueToolFixup-FixA2DP) 的修复版，含 A2DP 时钟读取补丁；官方版无此修复，替换后 AirPods 将再度无声（配套 `-btlfxa2dpcheck` 也会失效） |
 | `GenericUSBXHCI.kext` 1.3.0b2 | 为 Big Sur+ 修改的 AMD XHCI fork；官方 RehabMan 版无 AMD 适配 |
 | `UTBDefault` / `UTBMap` / `UTBMapTahoe` | 由 USBToolBox 生成的**本机定制映射**，不是上游发布物 |
-| `AirportItlwmAboveSequoia.kext` | 作者将 itlwm 官方 **Ventura 版构建重命名**（官方 release 无 Sequoia+ 版本）；更新时应下载最新 Ventura 版并保持该重命名 |
+| `AirportItlwmAboveSequoia.kext` | itlwm 官方构建仅提供到 Sonoma（14.0–14.3 与 14.4+ 互不通用），无 Sequoia+ 版本，Sequoia+ 只能沿用 Ventura 构建——本 kext 即作者将 **Ventura 版构建重命名**所得；更新时应下载 Ventura 版并保持该重命名 |
 | `IOSkywalkFamily` / `IO80211FamilyLegacy` | 取自 OCLP 的框架补丁，需与 OCLP-MOD 版本配套 |
 | `CtlnaAHCIPort` / `SATA-unsupported` / `AppleMCEReporterDisabler` | 无官方 release 渠道的社区维护版，维持现状 |
 
@@ -50,7 +50,7 @@
 
 其余 kext 均可跟随官方更新。核对结果：
 
-- **已是最新**：VoodooI2C 2.9.1、YogaSMC 1.5.3、USBToolBox 1.2.0、HoRNDIS 9.2（官方早已停更）、RealtekRTL8111 3.0.x、AirportItlwm 系列（= itlwm v2.3.0 stable，最新 release；其中 `AirportItlwmAboveSequoia` 为作者将 Ventura 版构建重命名用于 Sequoia+）。
+- **已是最新**：VoodooI2C 2.9.1、YogaSMC 1.5.3、USBToolBox 1.2.0、HoRNDIS 9.2（官方早已停更）、RealtekRTL8111 3.0.x、AirportItlwm 系列（= itlwm v2.3.0 stable，最新 release，构建仅到 Sonoma；其中 `AirportItlwmAboveSequoia` 为作者将 Ventura 版构建重命名用于 Sequoia+）。
 - **本地版本高于最新正式 release**（CI 构建版，无需降级）：Lilu 1.7.3、VirtualSMC 1.3.8、AppleALC 1.9.8、NVMeFix 1.1.4、RestrictEvents 1.1.7、BrightnessKeys 1.0.4、VoodooPS2Controller 2.3.8、IntelBluetoothFirmware 系列 2.5.0。
 - **上游走 CI 构建、无正式 release**（当前为可得最新）：NootedRed 0.8.10、ForgedInvariant 1.5.0、AMFIPass 1.4.1。
 - **OpenCore 本体**：已更新至 **1.0.7**（2026-03-20），替换了 `BOOTx64.efi`、`OpenRuntime.efi`、`OpenCanopy.efi`、`ResetNvramEntry.efi`；`HfsPlus.efi` 已是 OcBinaryData 最新版。三份 config 均通过 ocvalidate (1.0.7) 校验，并顺带移除了无效键 `HideVerbose`。
