@@ -1,5 +1,28 @@
-https://bbs.pcbeta.com/viewthread-2073020-1-1.html
-https://github.com/ChefKissInc/NootedRed/issues/235#issuecomment-4567109847
-https://github.com/githubzijian/CompositorPacer
-https://github.com/hrx114514x/PC711Probe
-https://github.com/hrx114514x/AMDMicrophone-Continuity
+本仓库 README 引用及参考的全部链接，按用途分组。
+
+## 一、本 EFI 集成修复的出处
+
+- AMD 内核补丁：Tahoe 26.4+ 启动 Kernel Panic 修复（non-monotonic time）
+  https://github.com/AMD-OSX/AMD_Vanilla/pull/215
+- Intel 蓝牙 + AirPods 无声修复（远景论坛原帖）
+  https://bbs.pcbeta.com/viewthread-2068319-1-1.html
+- 修复版 BlueToolFixup.kext（A2DP 时钟读取补丁，v2.7.3）
+  https://github.com/hexxyan/BlueToolFixup-FixA2DP
+- NootedRed #235：Sonoma+ 壁纸 / 视频解码挂起的 allowMetalTransferSession 绕过方案
+  https://github.com/ChefKissInc/NootedRed/issues/235#issuecomment-4567109847
+
+## 二、可选工具与优化
+
+- macOS Tahoe 系统卡顿治理（Spotlight 索引，远景论坛原帖）
+  https://bbs.pcbeta.com/viewthread-2073020-1-1.html
+- CompositorPacer：缓解 macOS 26 动画掉帧（保持 WindowServer 合成路径活跃）
+  https://github.com/githubzijian/CompositorPacer
+- PC711Probe：SK hynix PC711/BC711/BC511 与三星 PM991 在 macOS 11–15 的 NVMe panic 修复
+  https://github.com/hrx114514x/PC711Probe
+- AMDMicrophone-Continuity：Renoir ACP 内建数字麦克风驱动（实验性）
+  https://github.com/hrx114514x/AMDMicrophone-Continuity
+
+## 三、其他
+
+- BetterDisplay（Sonoma+ HiDPI 工具）激活页面
+  https://macked.app/tools/betterdisplay.php
