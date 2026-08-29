@@ -428,6 +428,24 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
+				<string>PC711ProbeForce.kext</string>
+				<key>Comment</key>
+				<string>PC711Probe Force variant v1.8.1, disabled by default; use if standard build does not match; NEVER enable both</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/PC711Probe</string>
+				<key>MaxKernel</key>
+				<string>24.99.99</string>
+				<key>MinKernel</key>
+				<string>20.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
 				<string>AirportItlwmMojave.kext</string>
 				<key>Comment</key>
 				<string>V2.3.0</string>

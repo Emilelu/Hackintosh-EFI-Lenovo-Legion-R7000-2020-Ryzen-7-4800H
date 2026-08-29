@@ -72,11 +72,11 @@ Lenovo 拯救者 R7000 2020（AMD Ryzen 7 4800H）专用 OpenCore EFI（OpenCore
 
 ## NVMe 屏蔽说明
 
-本机出厂硬盘为海力士 PC611（macOS 不兼容），EFI 通过 `SSDT-Disable_NVMe_GPP1.aml` 屏蔽，另加装 WD Blue SN570 作为系统盘。
+`SSDT-Disable_NVMe_GPP1.aml` 的作用是**屏蔽出厂硬盘位**（GPP1）。本机出厂海力士 PC611 正插在该硬盘位且不兼容 macOS，故默认配置已启用该 SSDT（Mojave2Catalina / BigSur 配置中默认关闭）。
 
-- 出厂盘同为海力士（或同系列不兼容型号）：无需改动。
-- 出厂盘为 macOS 兼容型号（WD、Samsung 等）：禁用或删除 `EFI/OC/ACPI/SSDT-Disable_NVMe_GPP1.aml`，否则该硬盘位无法识别。
-- **替代方案**：出厂盘为 SK hynix PC711 / BC711 / BC511 或三星 PM991 时，可启用已内置的 `PC711Probe.kext` 免除屏蔽，详见 [Kexts.md](./docs/Kexts.md#pc711probe备用默认禁用)。
+- 海力士原装盘（或同系列不兼容型号）仍插在该硬盘位：保持 SSDT 启用即可。
+- 该硬盘位更换为 macOS 兼容硬盘（WD、Samsung 等）：禁用或删除该 SSDT，否则此硬盘位无法识别。
+- **替代方案**：也可尝试启用内置的 `PC711Probe.kext` / `PC711ProbeForce.kext` 免除屏蔽，详见 [Kexts.md](./docs/Kexts.md#pc711probe--pc711probeforce备用默认禁用)。
 
 ## 后记
 

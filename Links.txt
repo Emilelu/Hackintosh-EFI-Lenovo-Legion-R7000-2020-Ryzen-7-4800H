@@ -17,6 +17,8 @@
   https://bbs.pcbeta.com/viewthread-2073020-1-1.html
 - CompositorPacer：缓解 macOS 26 动画掉帧（保持 WindowServer 合成路径活跃）
   https://github.com/githubzijian/CompositorPacer
+- GLFriend：NootedRed 下让应用以纯 OpenGL 4.1 启动，规避双源混合崩溃（工具介绍页）
+  https://imacos.top/2024/09/03/glfriend-v1-02/
 - PC711Probe：SK hynix PC711/BC711/BC511 与三星 PM991 在 macOS 11–15 的 NVMe panic 修复
   https://github.com/hrx114514x/PC711Probe
 - AMDMicrophone-Continuity：Renoir ACP 内建数字麦克风驱动（实验性）

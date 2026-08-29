@@ -33,6 +33,8 @@ AirportItlwm 通过 MinKernel / MaxKernel 自动匹配版本，**Sonoma 14.0–1
 
 Sequoia+ 额外加载 `IOSkywalkFamily`、`IO80211FamilyLegacy`（传统 Wi-Fi 框架，均 MinKernel 24.0.0），并需配合 OCLP-MOD 补丁。
 
+> **关于 AirportItlwmAboveSequoia**：itlwm 官方 release 目前最新仅提供到 Ventura 版构建，Sequoia+ 只能沿用该构建。本 EFI 中的 `AirportItlwmAboveSequoia.kext` 即为作者将 Ventura 版构建重命名所得，二进制与 `AirportItlwmVentura.kext` 相同。
+
 ## Tahoe 音频
 
 AppleALC 已集成，但 Tahoe 底层变更后需配合 OCLP-MOD 补丁，音频设备才能正常唤醒。

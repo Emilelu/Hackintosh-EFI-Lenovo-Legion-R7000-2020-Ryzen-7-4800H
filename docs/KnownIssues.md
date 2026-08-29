@@ -20,9 +20,10 @@ macOS 的 `bluetoothd` 在建立 A2DP 通道时会读取蓝牙硬件时钟（HCI
 
 ### 4. Chromium / Electron 应用卡死（NootedRed 已知限制）
 
-NootedRed 官方不支持 Chromium 系硬件加速，浏览器及 Electron 应用可能卡死或出现图形异常。绕过方法：
+NootedRed 官方不支持 Chromium 系硬件加速，浏览器及 Electron 应用可能卡死或出现图形异常。根因是使用 OpenGL 双源混合（Dual Source Blend）的应用会触发 NootedRed 崩溃。绕过方法：
 
 - 在 `chrome://flags` 中禁用 **GPU 光栅化（GPU rasterization）**，或以 `open -a 应用名称 --args --disable-gpu` 启动。
+- **GLFriend**：专用小工具（AppleScript 启动器），让受影响应用以纯 OpenGL 4.1 加速方式启动，从而规避双源混合崩溃；支持 macOS 10.15+，可自由选择应用，代价是每次都需经它启动（[工具介绍](https://imacos.top/2024/09/03/glfriend-v1-02/)）。
 - **Sonoma+ 壁纸 / 视频解码挂起、反复 gpuRestart**：CoreMedia 的 Metal 传输会话与 VideoToolbox 硬解冲突，可通过禁用该偏好绕过（[NootedRed #235](https://github.com/ChefKissInc/NootedRed/issues/235)）：
   ```bash
   sudo defaults write /Library/Preferences/com.apple.coremedia allowMetalTransferSession -bool NO
