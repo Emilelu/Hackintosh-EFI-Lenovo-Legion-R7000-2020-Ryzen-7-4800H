@@ -12,9 +12,9 @@
 - Name：`Peter Gunn`
 - Code：`0079FCB69A1708F8`
 
-## 内建麦克风（实验性）
+## 内建麦克风
 
-本 EFI 默认不含麦克风驱动。若需要内建数字麦克风，可尝试 [AMDMicrophone-Continuity](https://github.com/hrx114514x/AMDMicrophone-Continuity)（Renoir ACP PDM 麦克风驱动，含 DMA 连续性修复）。注意：
+内建麦克风通常已由 AppleALC 直接驱动（HDA 通道），可先直接测试录音是否正常。[AMDMicrophone-Continuity](https://github.com/hrx114514x/AMDMicrophone-Continuity) 是**另一种方案**：针对走 Renoir ACP/PDM 通道的数字麦克风（含 DMA 连续性修复）。若采用，注意：
 
 - 必须安装到 `/Library/Extensions`，不支持经 OpenCore 注入（因此本 EFI 不内置）；
 - 需允许加载不受信任的 kext（`csr-active-config=01000000`，降低系统安全性）；

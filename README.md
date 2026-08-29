@@ -2,7 +2,7 @@
 
 Lenovo 拯救者 R7000 2020（AMD Ryzen 7 4800H）专用 OpenCore EFI（OpenCore 1.0.7），基于 SimpleKaruzi 的 EFI 深度调校，力求开箱即用。
 
-- **理论支持范围**：macOS Mojave (10.14) ～ Tahoe (26)，低于 Mojave 的版本未做测试。
+- **支持范围**：实测 Catalina (10.15) ～ Tahoe (26)；Mojave (10.14) 为理论支持，未实测。
 - 各版本安装成果截图见 [Screenshots](./Screenshots)。
 - 本 EFI 引用的全部外部链接汇总于 [Links.txt](./Links.txt)。
 
@@ -38,7 +38,7 @@ Lenovo 拯救者 R7000 2020（AMD Ryzen 7 4800H）专用 OpenCore EFI（OpenCore
 
 - **启用** Switchable Graphics（双显卡切换）
 - UMA Frame Buffer Size ≥ **1G**
-- **关闭** Secure Boot；建议同时关闭 AMD SVM 与 TPM
+- **关闭** Secure Boot；AMD SVM 与 TPM 可选关闭（不影响使用）
 
 ## 配置文件选择
 
@@ -76,6 +76,7 @@ Lenovo 拯救者 R7000 2020（AMD Ryzen 7 4800H）专用 OpenCore EFI（OpenCore
 
 - 海力士原装盘（或同系列不兼容型号）仍插在该硬盘位：保持 SSDT 启用即可。
 - 该硬盘位更换为 macOS 兼容硬盘（WD、Samsung 等）：禁用或删除该 SSDT，否则此硬盘位无法识别。
+- 不兼容的海力士盘若位于**另一硬盘位**：自带的 SSDT 屏蔽不到该位置，需自行制作屏蔽对应硬盘位的 SSDT，或将硬盘换至出厂硬盘位（GPP1）以使用本 EFI 自带的屏蔽 SSDT。
 - **替代方案**：也可尝试启用内置的 `PC711Probe.kext` / `PC711ProbeForce.kext` 免除屏蔽，详见 [Kexts.md](./docs/Kexts.md#pc711probe--pc711probeforce备用默认禁用)。
 
 ## 后记

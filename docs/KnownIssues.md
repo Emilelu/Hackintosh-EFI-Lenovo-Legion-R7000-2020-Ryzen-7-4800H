@@ -24,7 +24,7 @@ NootedRed 官方不支持 Chromium 系硬件加速，浏览器及 Electron 应�
 
 - 在 `chrome://flags` 中禁用 **GPU 光栅化（GPU rasterization）**，或以 `open -a 应用名称 --args --disable-gpu` 启动。
 - **GLFriend**：专用小工具（AppleScript 启动器），让受影响应用以纯 OpenGL 4.1 加速方式启动，从而规避双源混合崩溃；支持 macOS 10.15+，可自由选择应用，代价是每次都需经它启动（[工具介绍](https://imacos.top/2024/09/03/glfriend-v1-02/)）。
-- **Sonoma+ 壁纸 / 视频解码挂起、反复 gpuRestart**：CoreMedia 的 Metal 传输会话与 VideoToolbox 硬解冲突，可通过禁用该偏好绕过（[NootedRed #235](https://github.com/ChefKissInc/NootedRed/issues/235)）：
+- **Sonoma+ 壁纸 / 视频解码挂起、反复 gpuRestart**：CoreMedia 的 Metal 传输会话与 VideoToolbox 硬解冲突，可通过禁用该偏好绕过（[NootedRed #235](https://github.com/ChefKissInc/NootedRed/issues/235#issuecomment-4567109847)）：
   ```bash
   sudo defaults write /Library/Preferences/com.apple.coremedia allowMetalTransferSession -bool NO
   sudo chmod 644 /Library/Preferences/com.apple.coremedia.plist
