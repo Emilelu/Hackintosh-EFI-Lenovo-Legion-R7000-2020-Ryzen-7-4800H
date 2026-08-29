@@ -52,6 +52,12 @@ Lenovo 拯救者 R7000 2020（AMD Ryzen 7 4800H）专用 OpenCore EFI（OpenCore
 
 > 出厂海力士硬盘的屏蔽 SSDT（`SSDT-Disable_NVMe_GPP1.aml`）**仅在默认配置中启用**；Mojave2Catalina 与 BigSur 配置中该条目默认关闭，如有需要请手动开启。
 
+### 安装阶段：临时禁用 NootedRed
+
+**全新安装系统时，需先将 `NootedRed.kext` 临时禁用**：在 config 的 `Kernel → Add` 中把 `NootedRed.kext` 的 `Enabled` 设为 `false`，完成安装、进入桌面后再改回 `true` 并重启。
+
+日常使用必须保持启用——核显驱动依赖它。
+
 ### boot-args
 
 ```
